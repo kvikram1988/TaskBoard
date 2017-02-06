@@ -1,0 +1,116 @@
+/* Stylesheet for task board */
+
+/* Common Styles */
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    background-color: #FCFCFC;
+    position: relative;
+    height: 100%;
+}
+
+.pull-right {
+    float: right;
+}
+
+/* Header Styles */
+header .task-board-header-title {
+    padding: 20px 10px;
+    height: 60px;
+    background-color: #5F9EA0;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+/* Content Styles */
+section {
+    padding: 20px
+}
+
+section .main-section {
+    position: relative;
+    min-height: 100%;
+    margin-bottom: -50px;
+}
+
+section .main-section .task-list {
+    min-height: 400px;
+    border: 1px solid #CCCCCC;
+    width: 22%;
+    background-color: #FFFFFF;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+section .main-section #task-list-name {
+    height: 30px;
+    font-size: 16px;
+}
+
+section .main-section .add-task-list-set {
+    border: 2px solid #CCC;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    background-color: #FFFFFF;
+    z-index: 10;
+}
+section .main-section .task-title {
+    padding: 10px 15px;
+    text-align: left;
+    background-color: #5F9EA0;
+    color: #FFFFFF;
+}
+
+section .main-section .add-task-item-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #ccc;
+}
+
+section .main-section .delete-icon {
+    cursor: pointer;
+}
+
+section .main-section .task-list-items {
+    padding: 10px;
+    min-height: 320px;
+    margin-bottom: 30px;
+}
+
+section .main-section .task-item {
+    padding: 15px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: move;
+    background-color: #5F9EA0;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+section .main-section .add-task-input {
+    width: 99%;
+    height: 34px;
+    font-size: 16px;
+    border: 0;
+}
+
+/* Media queries for responsiveness */
+
+@media only screen and (max-width: 800px) {
+    section .main-section .task-list {
+        width: 45%;
+    }
+}

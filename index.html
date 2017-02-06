@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Taskboard</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="task-board-header-title">Task Board</div>
+    </header>
+    <section>
+        <div class="main-section">
+            <div id="task-lists-container">
+                <div class="task-list">
+                    <div class="task-title">
+                        OPEN
+                        <i class="pull-right delete-icon" onclick="taskBoard.deleteTaskList(event)" title="Delete">X</i>
+                    </div>
+                    <div class="task-list-items" ondrop="taskBoard.drop(event)" ondragover="taskBoard.allowDrop(event)">
+                        <div class="task-item" draggable="true" ondragstart="taskBoard.drag(event)">
+                            Do sky diving.
+                            <i class="pull-right delete-icon" onclick="taskBoard.deleteTaskItem(event)" title="Delete">x</i>
+                        </div>
+                    </div>
+                    <div class="add-task-item-container">
+                        <form onsubmit="taskBoard.createTaskItem(event)">
+                            <input type="text" placeholder="Add a task..." class="add-task-input" required>
+                        </form>
+                    </div>
+                </div>
+                <div class="task-list">
+                    <div class="task-title">
+                        IN PROGRESS
+                        <i class="pull-right delete-icon" onclick="taskBoard.deleteTaskList(event)" title="Delete">X</i>
+                    </div>
+                    <div class="task-list-items" ondrop="taskBoard.drop(event)" ondragover="taskBoard.allowDrop(event)">
+                        <div class="task-item" draggable="true" ondragstart="taskBoard.drag(event)">
+                            Scuba Diving.
+                            <i class="pull-right delete-icon" onclick="taskBoard.deleteTaskItem(event)" title="Delete">x</i>
+                        </div>
+                    </div>
+                    <div class="add-task-item-container">
+                        <form onsubmit="taskBoard.createTaskItem(event)">
+                            <input type="text" placeholder="Add a task..." class="add-task-input" required>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <form onsubmit="taskBoard.createNewTaskList(event)">
+                <fieldset class="add-task-list-set">
+                    <legend>Add task list</legend>
+                    List Name: <input type="text" id="task-list-name" required autocomplete="off"><br>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+    <footer>
+        
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
